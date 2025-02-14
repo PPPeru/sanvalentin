@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Valentín</title>
+    <style>
+        body {
+            background: url('https://www.unmsm.edu.pe/img/backgrounds/fondo-final-pagina-central.png'), red;
+            text-align: center;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .image-container img {
+            width: 150px;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+        h1 {
+            font-size: 30px;
+            margin-top: 20px;
+            color: white;
+        }
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .heart {
+            width: 100px;
+            height: 90px;
+            background-color: #ff69b4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.3s;
+            clip-path: polygon(
+                50% 15%,
+                61% 3%,
+                75% 0%,
+                89% 5%,
+                100% 20%,
+                97% 38%,
+                85% 55%,
+                50% 95%,
+                15% 55%,
+                3% 38%,
+                0% 20%,
+                11% 5%,
+                25% 0%,
+                39% 3%
+            );
+        }
+        .heart:hover {
+            transform: scale(1.1);
+        }
+        #no {
+            position: relative;
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="image-container">
+            <img src="https://i1.rgstatic.net/ii/profile.image/1010529535524864-1617940424077_Q512/Alvaro-Mandujano.jpg" alt="Imagen San Valentín">
+        </div>
+
+        <h1>¿Quieres ser mi Operador Politico favorito? ❤️</h1>
+
+        <div class="buttons">
+            <button id="yes" class="heart" onclick="alert('¡Sabía que dirías que sí, ahora dame entradas para el concierto! ❤️')">Sí</button>
+            <button id="no" class="heart">No</button>
+        </div>
+
+        <div class="footer">BY: PPP</div>
+    </div>
+
+    <script>
+        const noButton = document.getElementById("no");
+
+        noButton.addEventListener("mouseover", () => {
+            const x = Math.random() * (window.innerWidth - 200) + 100;
+            const y = Math.random() * (window.innerHeight - 200) + 100;
+            noButton.style.position = "absolute";
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        });
+    </script>
+
+</body>
+</html>
